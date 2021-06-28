@@ -9,7 +9,10 @@ Esse repositório tem como objetivo agilizar o desenvolvimento de novos projetos
 ## 🛠 Tecnologias
 
 - [Next.JS](https://nextjs.org/)
+- [Typescript](https://www.typescriptlang.org/)
 - [Chakra UI](https://chakra-ui.com/)
+- [SWR](https://swr.vercel.app/)
+- [React hook form](https://react-hook-form.com/)
 
 ## 🚀 Instalação
 
@@ -24,6 +27,8 @@ Depois, entre na pasta do projeto e instale as dependências com yarn
 ```bash
 cd my-project && yarn
 ```
+
+Crie um arquivo `.env` na raiz do projeto baseado no arquivo `.env-example`
 
 Após a instalação, rode o ambiente de dev
 
