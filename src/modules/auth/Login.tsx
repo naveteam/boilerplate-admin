@@ -2,15 +2,16 @@ import Router from 'next/router'
 import { Center, Text, Button, useToast } from '@chakra-ui/react'
 import { useForm } from 'react-hook-form'
 
-import { Card, Input } from '@/components'
-import { loginResolver } from '@/utils/yup-resolvers'
-import { useAuth } from '@/services/auth'
-import { UserCredentials } from '@/types/user'
+import { Card, Input } from '@common/components'
+
+import { useAuth } from './authServices'
+import { loginResolver } from './authYupResolvers'
+import { AuthCredentials } from './authTypes'
 
 const Login = () => {
   const toast = useToast()
 
-  const { register, handleSubmit, formState } = useForm<UserCredentials>({ resolver: loginResolver })
+  const { register, handleSubmit, formState } = useForm<AuthCredentials>({ resolver: loginResolver })
   const { errors, isSubmitting } = formState
 
   const { login } = useAuth()

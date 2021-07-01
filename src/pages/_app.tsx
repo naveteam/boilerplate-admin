@@ -2,8 +2,8 @@ import type { AppProps } from 'next/app'
 import { ChakraProvider } from '@chakra-ui/react'
 import { SWRConfig } from 'swr'
 
-import { theme } from '@/theme'
-import { api } from '@/providers/api'
+import { theme } from '@common/theme'
+import { api } from '@common/providers/api'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (

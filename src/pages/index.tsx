@@ -1,6 +1,6 @@
 import { Center, Text, Spinner } from '@chakra-ui/react'
 
-import { useLoggedUser } from '@/services/auth'
+import { useLoggedUser } from '@auth/authServices'
 
 const Home = () => {
   const { user, isLoading } = useLoggedUser()

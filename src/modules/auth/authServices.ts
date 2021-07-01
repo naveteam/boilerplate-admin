@@ -1,11 +1,13 @@
 import useSWR, { mutate } from 'swr'
 
-import { api } from '@/providers/api'
-import { setToken, clearToken } from '@/utils/auth'
-import { User, UserCredentials } from '@/types/user'
+import { User } from '@users/userTypes'
+import { api } from '@common/providers/api'
+
+import { setToken, clearToken } from './authToken'
+import { AuthCredentials } from './authTypes'
 
 export const useAuth = () => {
-  const login = async (credentials: UserCredentials) => {
+  const login = async (credentials: AuthCredentials) => {
     const { access_token } = await api.post('/v1/users/login', credentials)
     setToken(access_token)
     mutate('/v1/me')
