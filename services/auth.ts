@@ -1,8 +1,8 @@
-import { mutate } from 'swr'
+import useSWR, { mutate } from 'swr'
 
 import { api } from '@/providers/api'
 import { setToken, clearToken } from '@/utils/auth'
-import { UserCredentials } from '@/types/user'
+import { User, UserCredentials } from '@/types/user'
 
 export const useAuth = () => {
   const login = async (credentials: UserCredentials) => {
@@ -17,4 +17,13 @@ export const useAuth = () => {
   }
 
   return { login, logout }
+}
+
+export const useLoggedUser = () => {
+  const { data, error } = useSWR<User>('/v1/me')
+
+  return {
+    user: data,
+    isLoading: !error && !data
+  }
 }
