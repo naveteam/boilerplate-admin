@@ -15,7 +15,9 @@
     "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./*"]
+      "@auth/*": ["./src/modules/auth/*"],
+      "@users/*": ["./src/modules/users/*"],
+      "@common/*": ["src/common/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

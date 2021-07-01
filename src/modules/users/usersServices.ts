@@ -1,6 +1,6 @@
 import useSWR from 'swr'
 
-import { User } from '@/types/user'
+import { User } from './userTypes'
 
 export const useUsers = () => {
   const { data, error } = useSWR<User[]>('/v1/users')
