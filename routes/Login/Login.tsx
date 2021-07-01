@@ -18,7 +18,7 @@ const Login = () => {
   const onSubmit = handleSubmit(async (values) => {
     try {
       await login(values)
-      Router.push('/app/home')
+      Router.push('/')
     } catch (error) {
       toast({ title: 'Ops!', description: 'Credenciais inválidas', status: 'error' })
     }

@@ -1,9 +1,9 @@
 import { Center, Text, Spinner } from '@chakra-ui/react'
 
-import { useUser } from '@/services/user'
+import { useLoggedUser } from '@/services/auth'
 
 const Home = () => {
-  const { user, isLoading } = useUser()
+  const { user, isLoading } = useLoggedUser()
 
   return (
     <Center height='100vh' p={100}>

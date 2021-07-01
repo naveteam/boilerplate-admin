@@ -22,10 +22,10 @@ api.interceptors.request.use((config) => {
 api.interceptors.response.use(
   (response) => response?.data,
   (error) => {
-    if (error?.response?.status !== 401 || ['/auth/login'].includes(window.location.pathname)) {
+    if (error?.response?.status !== 401 || ['/login'].includes(window.location.pathname)) {
       return Promise.reject(error)
     }
     clearToken()
-    Router.push('/auth/login')
+    Router.push('/login')
   }
 )
