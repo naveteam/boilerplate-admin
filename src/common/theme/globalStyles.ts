@@ -1,7 +1,10 @@
 const globalStyles = {
   global: () => ({
     body: {
-      bg: 'gray.800'
+      bg: 'gray.100'
+    },
+    table: {
+      bg: 'white'
     }
   })
 }
